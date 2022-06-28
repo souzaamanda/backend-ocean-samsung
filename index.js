@@ -6,6 +6,7 @@ const dbName = "ocean_bancodedados_27_06_2022";
 
 async function main() {
   // Conexão com o banco de dados
+ /* 
 
   console.log("Conectando ao banco de dados...");
 
@@ -16,6 +17,7 @@ async function main() {
   const collection = db.collection("herois");
 
   console.log("Conexão realizada com sucesso!");
+  */
 
   // Aplicação Backend com Express
 
@@ -88,7 +90,7 @@ async function main() {
     res.send("Item removido com sucesso.");
   });
 
-  app.listen(3000, () =>
+  app.listen(process.env.PORT || 3000, () =>
     console.log("Servidor rodando em http://localhost:3000")
   );
 }
